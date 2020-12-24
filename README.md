@@ -75,22 +75,21 @@ COLOR VARCHAR(100)
 с учётом того, что в ящике может быть ещё ящик с предметами требуемого цвета.
 
 Например, на POST-запрос с телом запроса в JSON вида:
----------------------------
--POST /test HTTP/1.1
--Host: localhost
--Accept: application/json
--Content-Type:application/json
--Content-Length: 25
--{"box":"1","color":"red"}
----------------------------
+
+POST /test HTTP/1.1
+Host: localhost
+Accept: application/json
+Content-Type:application/json
+Content-Length: 25
+{"box":"1","color":"red"}
+
 для вышеприведённого XML должен быть ответ вида:
----------------------------
--HTTP/1.1 200
--Content-Type: application/json;charset=UTF-8
--Transfer-Encoding: chunked
--Date: Mon, 01 Sep 2019 12:00:26 GMT
--[2,3]
----------------------------
+
+HTTP/1.1 200
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 01 Sep 2019 12:00:26 GMT
+[2,3]
 
 Проект нужно разместить на GitHub и прислать ссылку.
 Время на решение - до трех дней.
