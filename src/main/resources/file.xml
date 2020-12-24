@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<Storage>
+ <Box id="1">
+   <Item id="1"/>
+   <Item color="red" id="2"/>
+   <Box id="3">
+       <Item id="3" color="red" />
+       <Item id="4" color="black" />    
+   </Box>
+   <Box id="6"/>
+   <Item id="5"/>
+ </Box>
+ <Item id="6"/>
+</Storage>

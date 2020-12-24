@@ -1,0 +1,45 @@
+## Liquibase database script
+#@author Igor Popovich, email: popovichia, phone: +7 913 902 36 36, company:
+#popovichia@gmail.com
+---
+databaseChangeLog:
+- changeSet:
+    id: 1
+    author: Igor Popovich
+    changes:
+    - createTable:
+        tableName: box
+        columns:
+        - column:
+            name: id
+            type: INT
+            constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: box_pkey
+        - column:
+            name: contained_in
+            type: INT
+- changeSet:
+    id: 2
+    author: Igor Popovich
+    changes:
+    - createTable:
+        tableName: item
+        columns:
+        - column:
+            name: id
+            type: INT
+            constraints:
+                nullable: false
+                primaryKey: true
+                primaryKeyName: item_pkey
+        - column:
+            name: contained_in
+            type: INT
+            constraints:
+                foreignKeyName: fk_box_id
+                references: box(id)
+        - column:
+            name: color
+            type: VARCHAR(100)

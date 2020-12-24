@@ -1,3 +1,9 @@
+#Storage application srping boot configuration
+#@author Igor Popovich, email: popovichia, phone: +7 913 902 36 36, company:
+#popovichia@gmail.com
+---
+server:
+    port: 9080
 spring:
     application:
         name: StorageService
@@ -10,3 +16,11 @@ spring:
         database-platform: org.hibernate.dialect.SQLiteDialect
         hibernate:
             ddl-auto: none
+    liquibase:
+        enabled: true
+        change-log: classpath:db_changelog/db_updates.yaml
+logging:
+    file:
+        name:
+    pattern:
+        console: "%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"
