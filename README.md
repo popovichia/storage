@@ -85,7 +85,7 @@ Content-Length: 25
 
 для вышеприведённого XML должен быть ответ вида:
 
-HTTP/1.1 200
+Response: HTTP/1.1 200
 Content-Type: application/json;charset=UTF-8
 Transfer-Encoding: chunked
 Date: Mon, 01 Sep 2019 12:00:26 GMT
